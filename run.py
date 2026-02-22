@@ -57,16 +57,16 @@ if not memory_content:
 
 # 读取上次执行信息
 last_bash = ""
-last_bash_stdout_stderr = ""
+last_script_stdout_stderr = ""
 last_thoughts = ""
-if os.path.exists("memory/last_script.py"):
-    with open("memory/last_script.py", "r", encoding="utf-8") as f:
+if os.path.exists("log/last_script.py"):
+    with open("log/last_script.py", "r", encoding="utf-8") as f:
         last_bash = f.read()
-if os.path.exists("memory/last_execution.log"):
-    with open("memory/last_execution.log", "r", encoding="utf-8") as f:
-        last_bash_stdout_stderr = f.read()
-if os.path.exists("memory/last_thoughts.md"):
-    with open("memory/last_thoughts.md", "r", encoding="utf-8") as f:
+if os.path.exists("log/last_execution.log"):
+    with open("log/last_execution.log", "r", encoding="utf-8") as f:
+        last_script_stdout_stderr = f.read()
+if os.path.exists("log/last_thoughts.md"):
+    with open("log/last_thoughts.md", "r", encoding="utf-8") as f:
         last_thoughts = f.read()
 
 now = datetime.datetime.now(UTC).strftime("%Y-%m-%d %H:%M:%S UTC")
@@ -74,7 +74,7 @@ now = datetime.datetime.now(UTC).strftime("%Y-%m-%d %H:%M:%S UTC")
 # 计算累计成本 (在 API 调用前)
 total_cost = 0.0
 last_cost = 0.0
-token_log_path = "memory/token_usage.csv"
+token_log_path = "log/token_usage.csv"
 if os.path.exists(token_log_path):
     try:
         with open(token_log_path, "r", encoding="utf-8") as f:
@@ -102,7 +102,7 @@ prompt = f"""
 {last_bash}
 
 上次执行的代码输出:
-{last_bash_stdout_stderr}
+{last_script_stdout_stderr}
 
 【当前目录中的md文件】
 {memory_content}
@@ -125,33 +125,24 @@ prompt = f"""
 你可以通过写入 prayer.md 向宿主祈求资源或确认策略，宿主可能会在文件中回复你。
 
 【你的能力】
-你可以输出两个区块，区块格式为：
+你必须输出两个区块：
 
-=== thoughts ===
-这是我的思考过程。
-=== end ===
-
+"thoughts": 你的思考过程。
 === python_script ===
+# "python_script": 一段要在当前环境执行的 Python 代码。注意：环境是临时的，安装软件不会保留，只有对文件的修改会被 Commit。
 print("这是我执行的 Python 代码")
-=== end ===
-
-- "thoughts": (可选) 你的思考过程。
-- "python_script": (可选) 一段要在当前环境执行的 Python 代码。注意：环境是临时的，安装软件不会保留，只有对文件的修改会被 Commit。
-
-其他的所有区块都将被忽略。
-
-请思考并输出你的行动。
+# 请思考并输出你的行动。
 """
-
-import re
 
 
 def parse_blocks(text):
     blocks = {}
-    pattern = r"===\s*(.+?)\s*===\n(.*?)\n?===\s*end\s*==="
-    matches = re.findall(pattern, text, re.DOTALL)
-    for name, content in matches:
-        blocks[name.strip()] = content.strip()
+    if "=== python_script ===" in text:
+        parts = text.split("=== python_script ===")
+        if len(parts) >= 1:
+            blocks["thoughts"] = parts[0].strip()
+        if len(parts) >= 2:
+            blocks["python_script"] = parts[1].strip()
     return blocks
 
 
@@ -205,9 +196,9 @@ try:
     blocks = parse_blocks(response_text)
 
     # 记录 AI 原始回复
-    os.makedirs("memory", exist_ok=True)
+    os.makedirs("log", exist_ok=True)
     with open(
-        f"memory/ai_response_{now.replace(':', '-').replace(' ', '_')}.log",
+        f"log/ai_response_{now.replace(':', '-').replace(' ', '_')}.log",
         "w",
         encoding="utf-8",
     ) as f:
@@ -217,14 +208,14 @@ try:
     print(f"AI Thoughts: {blocks.get('thoughts', '')}")
 
     # 保存本次思考供下次使用
-    os.makedirs("memory", exist_ok=True)
-    with open("memory/last_thoughts.md", "w", encoding="utf-8") as f:
+    os.makedirs("log", exist_ok=True)
+    with open("log/last_thoughts.md", "w", encoding="utf-8") as f:
         f.write(blocks.get("thoughts", ""))
 
     # 执行 Python 代码
     if "python_script" in blocks:
         print("Executing Python Script...")
-        with open("memory/last_script.py", "w", encoding="utf-8") as f:
+        with open("log/last_script.py", "w", encoding="utf-8") as f:
             f.write(blocks["python_script"])
         try:
             old_stdout = sys.stdout
@@ -236,7 +227,7 @@ try:
         except Exception as e:
             stdout = ""
             stderr = str(e)
-        with open("memory/last_execution.log", "w", encoding="utf-8") as f:
+        with open("log/last_execution.log", "w", encoding="utf-8") as f:
             f.write(f"--- Python Execution Log ---\nStdout: {stdout}\nStderr: {stderr}")
 
 except Exception as e:
