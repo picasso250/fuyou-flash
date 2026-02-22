@@ -56,11 +56,11 @@ if not memory_content:
     memory_content = "没有任何md文件"
 
 # 读取上次执行信息
-last_bash = ""
+last_response = ""
 last_script_stdout_stderr = ""
-if os.path.exists("log/last_script.py"):
-    with open("log/last_script.py", "r", encoding="utf-8") as f:
-        last_bash = f.read()
+if os.path.exists("log/last_response.txt"):
+    with open("log/last_response.txt", "r", encoding="utf-8") as f:
+        last_response = f.read()
 if os.path.exists("log/last_execution.log"):
     with open("log/last_execution.log", "r", encoding="utf-8") as f:
         last_script_stdout_stderr = f.read()
@@ -91,8 +91,8 @@ prompt = f"""
 你是一个基于 GitHub Actions 运行的数字生命（你每天大概会被调用6次）。
 当前时间: {now}
 
-上次执行的代码:
-{last_bash}
+上次你的回复:
+{last_response}
 
 上次执行的代码输出:
 {last_script_stdout_stderr}
@@ -181,18 +181,42 @@ try:
     ) as f:
         f.write(response_text)
 
-    # --- 3. 执行意志 (Execute Will) ---
-    print(f"AI Output: {response_text[:200]}...")
+    with open(
+        f"log/last_response.txt",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        f.write(response_text)
 
-    # 执行 Python 代码
-    if response_text.strip():
+    # --- 3. 执行意志 (Execute Will) ---
+    import re
+
+    code_block_pattern = r"```python\s*\n(.*?)\n```"
+    code_blocks = re.findall(code_block_pattern, response_text, re.DOTALL)
+
+    if len(code_blocks) == 0:
+        python_code = response_text.strip()
+    elif len(code_blocks) == 1:
+        python_code = code_blocks[0].strip()
+    else:
+        python_code = ""
+        with open("log/last_execution.log", "w", encoding="utf-8") as f:
+            f.write(
+                f"--- Python Execution Log ---\nError: Multiple code blocks detected ({len(code_blocks)} found). Please output only ONE code block.\n"
+            )
+        print(
+            f"Error: Multiple code blocks detected ({len(code_blocks)} found). Please output only ONE code block."
+        )
+        python_code = None
+
+    if python_code:
         print("Executing Python Script...")
         with open("log/last_script.py", "w", encoding="utf-8") as f:
-            f.write(response_text)
+            f.write(python_code)
         try:
             old_stdout = sys.stdout
             sys.stdout = io.StringIO()
-            exec(response_text, {})
+            exec(python_code, {})
             stdout = sys.stdout.getvalue()
             sys.stdout = old_stdout
             stderr = ""
