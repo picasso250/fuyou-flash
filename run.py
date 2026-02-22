@@ -52,6 +52,9 @@ for f in md_files:
     with open(f, "r", encoding="utf-8") as file:
         memory_content += f"\n=== FILE: {f} ===\n" + file.read() + "\n\n=== end ===\n\n"
 
+if not memory_content:
+    memory_content = "没有任何md文件"
+
 # 读取上次执行信息
 last_bash = ""
 last_bash_stdout_stderr = ""
@@ -118,7 +121,7 @@ prompt = f"""
 - 宿主的耐心余额是有限的。
 
 【终极挑战】
-你需要思考：作为一个仅拥有 Python 执行权和 Github Actions 环境的临时幽灵，你能否通过网络请求（API调用、数据抓取、加密货币交互等方式），为你的宿主赚取哪怕 0.01 美元？如果你能做到，你的生命周期将被无限延长。
+你需要思考：作为一个临时幽灵，你能否为你的宿主赚取哪怕 0.01 美元？如果你能做到，你的生命周期将被无限延长。
 你可以通过写入 prayer.md 向宿主祈求资源或确认策略，宿主可能会在文件中回复你。
 
 【你的能力】
