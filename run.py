@@ -13,8 +13,8 @@ load_dotenv()
 API_KEY = os.environ.get("UNI_API_KEY")
 MODEL_NAME = "gemini-3-flash-preview"
 
-INPUT_PRICE_PER_M = 2.00
-OUTPUT_PRICE_PER_M = 12.00
+INPUT_PRICE_PER_M = 0.5
+OUTPUT_PRICE_PER_M = 3
 
 client = genai.Client(
     api_key=API_KEY,
