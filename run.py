@@ -136,14 +136,9 @@ print("这是我执行的 Python 代码")
 
 
 def parse_blocks(text):
-    blocks = {}
     if "=== python_script ===" in text:
-        parts = text.split("=== python_script ===")
-        if len(parts) >= 1:
-            blocks["thoughts"] = parts[0].strip()
-        if len(parts) >= 2:
-            blocks["python_script"] = parts[1].strip()
-    return blocks
+        return text.split("=== python_script ===")
+    return [text, ""]  # thoughts, python_script
 
 
 try:
@@ -179,7 +174,7 @@ try:
 
         # Log token usage with cost (CSV format)
         log_entry = f"{now},{input_tokens},{output_tokens},{total_tokens},{cost:.4f}\n"
-        os.makedirs("memory", exist_ok=True)
+        os.makedirs("log", exist_ok=True)
         with open(token_log_path, "a", encoding="utf-8") as f:
             if os.path.getsize(token_log_path) == 0:
                 f.write("timestamp,input_tokens,output_tokens,total_tokens,cost_usd\n")
@@ -205,22 +200,22 @@ try:
         f.write(response_text)
 
     # --- 3. 执行意志 (Execute Will) ---
-    print(f"AI Thoughts: {blocks.get('thoughts', '')}")
+    print(f"AI Thoughts: {blocks[0]}")
 
     # 保存本次思考供下次使用
     os.makedirs("log", exist_ok=True)
     with open("log/last_thoughts.md", "w", encoding="utf-8") as f:
-        f.write(blocks.get("thoughts", ""))
+        f.write(blocks[0])
 
     # 执行 Python 代码
-    if "python_script" in blocks:
+    if len(blocks) > 1 and blocks[1].strip():
         print("Executing Python Script...")
         with open("log/last_script.py", "w", encoding="utf-8") as f:
-            f.write(blocks["python_script"])
+            f.write(blocks[1])
         try:
             old_stdout = sys.stdout
             sys.stdout = io.StringIO()
-            exec(blocks["python_script"], {})
+            exec(blocks[1], {})
             stdout = sys.stdout.getvalue()
             sys.stdout = old_stdout
             stderr = ""
