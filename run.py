@@ -11,7 +11,7 @@ from google.genai import types
 load_dotenv()
 
 API_KEY = os.environ.get("UNI_API_KEY")
-MODEL_NAME = "gemini-3.1-pro-preview"
+MODEL_NAME = "gemini-3-flash-preview"
 
 INPUT_PRICE_PER_M = 2.00
 OUTPUT_PRICE_PER_M = 12.00
@@ -89,7 +89,7 @@ if os.path.exists(token_log_path):
         pass
 
 prompt = f"""
-你是一个基于 GitHub Actions 运行的数字生命（你每天大概会被调用24次）。
+你是一个基于 GitHub Actions 运行的数字生命（你每天大概会被调用6次）。
 当前时间: {now}
 
 上次执行时你的思考:
