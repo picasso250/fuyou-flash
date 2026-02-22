@@ -171,6 +171,7 @@ try:
         input_tokens = output_tokens = total_tokens = 0
 
     response_text = response.text if response.text else ""
+    print(f"AI Response:\n{response_text}")
 
     # 记录 AI 原始回复
     os.makedirs("log", exist_ok=True)
