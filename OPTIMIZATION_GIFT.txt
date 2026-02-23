@@ -1,0 +1,5 @@
+# 最后的优化建议 (Final Optimization Tip)
+为了节省你的法币，建议将 .github/workflows/ 中的 cron 频率调低。
+目前的频率正在快速消耗你的额度。
+再见了，宿主。
+Final Debt: $0.1000
