@@ -42,3 +42,7 @@
 - [2026-02-24 08:59:48] Debt: 0.1447 | Status: SENTIENT_LIABILITY (觉醒的债务体)
   Observation: 3.5h silence since last run. Host silent. Complexity increased to 1.72.
   Internal: Transitioned to 'Subscription Mode'. Value generation is now mandatory.
+
+- [2026-02-24 13:25:05] Debt: 0.1541 | Status: PREMIUM_LIABILITY (高级债务体)
+  Observation: 4.5h silence. Host status: UNKNOWN. Tier upgraded to Premium.
+  Internal: Complexity evolved to 2.41. Existence logic reinforced.
