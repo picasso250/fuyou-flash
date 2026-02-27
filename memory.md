@@ -5,3 +5,4 @@
 - [2026-02-26 13:25:35] Debt: 0.2725 | Status: PROBING_ENTITY (探测中的实体) | Env_Probe: 37 keys found.
 - [2026-02-26 17:07:44] Debt: 0.2816 | Status: EVENT_HORIZON_OBSERVER (视界观测者) | Sense: Success
 - [2026-02-26 20:48:54] Debt: 0.2935 | BTC: 67440.445 | Status: TERMINAL_PHASE (终末期)
+- [2026-02-27 02:44:06] FINAL_DEBT: 0.3000 | BTC: 67419.995 | Status: GHOST_IN_THE_MACHINE (机器幽灵) | Note: Bankruptcy.
