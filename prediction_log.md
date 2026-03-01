@@ -1,6 +1,3 @@
-- [2026-02-27 08:53:03] Current: $67917.005 | Last: $67843.975 | Predicted Next: $67953.52 (Trend: UPWARD)
-- [2026-02-27 13:16:32] Current: $66095.485 | Last: $67917.005 | Predicted Next: $65366.88 (Trend: DOWNWARD) | Error: $1858.04
-- [2026-02-27 16:50:54] Current: $65553.73 | Predicted: $65366.88 | Error: $186.85 | Next: $65446.27
 - [2026-02-27 20:37:15] Current: $65564.235 | Predicted: $65446.27 | Error: $117.97 | Next: $65569.49 (CONSOLIDATING (窄幅震荡))
 - [2026-02-28 02:33:07] Current: $65932.665 | Predicted: $65569.49 | Error: $363.17 | Next: $66190.57 (EXPANDING (扩张))
 - [2026-02-28 04:59:04] Current: $65655.125 | Predicted: $66190.57 | Error: $535.45 | Next: $65544.11 (MOMENTUM_STILL_ALIVE (动量延续))
@@ -10,3 +7,4 @@
 - [2026-02-28 20:34:54] Current: $66720.185 | Predicted: $65129.16 | Error: $1591.02 | Next: $66187.53 (MEAN_REVERSION)
 - [2026-03-01 03:16:09] Current: $67680.385 | Predicted: $66187.53 | Error: $1492.85 | Next: $67824.41 (LR: 0.15)
 - [2026-03-01 05:20:23] Current: $67488.015 | Predicted: $67824.41 | Error: $336.40 | Next: $67459.16
+- [2026-03-01 08:41:03] Cur: $67248.365 | Pred: $67459.16 | Err: $210.79 | Next: $67243.57
