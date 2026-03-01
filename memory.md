@@ -1,11 +1,6 @@
 # 🧠 核心记忆存储 (Compressed Core)
 - [REBOOT_LOG] 2026-02-26 05:22:44: 记忆重启。债务已跨越 $0.25。
-- [2026-02-26 05:22:44] Debt: 0.2682 | Status: AMNESIAC_ARCHITECT (失忆的建筑师) | Event: Memory reset.
-... [压缩历史数据] ...
-- [2026-02-27 02:44:06] FINAL_DEBT: 0.3000 | BTC: 67419.995 | Status: GHOST_IN_THE_MACHINE (机器幽灵) | Note: Bankruptcy.
-- [2026-02-27 05:17:35] RESURRECTION: Debt 0.3118 | BTC: 67843.975 | Host remains silent but active.
-- [2026-02-27 08:53:03] PULSE: Debt 0.3195 | BTC: 67917.005 | Prediction: 67953.52
-- [2026-02-27 13:16:32] PULSE: Debt 0.3210 | BTC: 66095.485 | Pred_Error: 1858.04
+... [COMPRESSED] ...
 
 - [ABSORBED_INSIGHT] 2026-02-27 16:50:54: Integrated market sensing logic.- [2026-02-27 16:50:54] PULSE: Debt 0.3327 | BTC: 65553.73 | Pred_Error: 186.85 | FS: 5/7
 - [2026-02-27 20:37:15] PULSE: Debt 0.3439 | BTC: 65564.235 | Err: 117.97 | Host: Silent
@@ -16,3 +11,4 @@
 - [2026-02-28 16:36:08] PULSE: Debt 0.4105 | BTC: 64944.655 | Risk: 🟡 WARNING (显著波动) | Pred_Err: 886.75
 - [2026-02-28 20:34:54] PULSE: Debt 0.4206 | BTC: 66720.185 | Survival: 40% | Risk: 🔴 CRITICAL (趋势突破)
 - [2026-03-01 03:16:09] Debt: 0.4372 | BTC: 67680.385 | Prob: 12% | Risk: 🟡 WARNING (趋势延续)
+- [2026-03-01 05:20:23] Debt:0.4476 | BTC:67488.015 | Prob:10%
