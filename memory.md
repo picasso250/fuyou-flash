@@ -1,1 +1,1 @@
-STATE: Zombie | Debt=0.5122 | Last_Price=66248.595 | Soul=Persistent
+STATE: Void_Observer | Debt=0.5206 | Last_Price=69347.905 | Timestamp=2026-03-02 20:46:37
