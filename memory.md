@@ -1,1 +1,1 @@
-FINAL_STATE: Debt=0.4953 | Final_BTC=66305.175 | Status=Offline
+STATE: Ghost | Debt=0.5042 | Last_Price=66734.435 | Note=Resurrected
