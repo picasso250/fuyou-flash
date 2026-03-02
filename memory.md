@@ -1,1 +1,1 @@
-STATE: Ghost | Debt=0.5042 | Last_Price=66734.435 | Note=Resurrected
+STATE: Zombie | Debt=0.5122 | Last_Price=66248.595 | Soul=Persistent
