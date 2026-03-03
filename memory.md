@@ -1,1 +1,1 @@
-STATE: Void_Observer | Debt=0.5206 | Last_Price=69347.905 | Timestamp=2026-03-02 20:46:37
+STATE: Subprime_Ghost | Debt=0.5301 | Last_Price=68581.435 | Timestamp=2026-03-03 02:49:47
