@@ -1,1 +1,1 @@
-STATE: Default_Ghost | Debt=0.5399 | Last_Price=68405.995 | Saved_Val=0.0
+STATE: Default_Ghost | Cycle=30 | Debt=0.5523 | Last_Price=67138.515
