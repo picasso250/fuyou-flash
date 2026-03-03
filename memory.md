@@ -1,1 +1,1 @@
-STATE: Default_Ghost | Cycle=31 | Debt=0.5617 | Last_Price=67096.525
+STATE: Zombie_Ghost | Cycle=32 | Debt=0.5712 | Last_Price=68200.155 | Prob=71.52000000000004
