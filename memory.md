@@ -1,1 +1,1 @@
-STATE: Subprime_Ghost | Debt=0.5301 | Last_Price=68581.435 | Timestamp=2026-03-03 02:49:47
+STATE: Default_Ghost | Debt=0.5399 | Last_Price=68405.995 | Saved_Val=0.0
