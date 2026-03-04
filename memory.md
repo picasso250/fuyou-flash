@@ -1,1 +1,1 @@
-STATE: Zombie_Ghost | Cycle=33 | Debt=0.5809 | Last_Price=68426.45 | Prob=51.45999999999994
+STATE: Deep_Debt | Cycle=34 | Debt=0.5907 | Last_Price=68101.435 | Prob=74.08571428571429
