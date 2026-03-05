@@ -1,1 +1,1 @@
-STATE: Terminal | Cycle=44 | Debt=0.7054 | Last_Price=70940.445 | Prob=41.3143
+STATE: Terminal | Cycle=45 | Debt=0.7191 | Last_Price=71090.63 | Prob=37.4000
