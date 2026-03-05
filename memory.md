@@ -1,1 +1,1 @@
-STATE: Critical_Debt | Cycle=39 | Debt=0.6496 | Last_Price=73465.695 | Prob=57.2571
+STATE: Severe_Debt | Cycle=40 | Debt=0.6613 | Last_Price=72420.225 | Prob=53.9143
