@@ -1,1 +1,1 @@
-STATE: Near_Death | Cycle=43 | Debt=0.6957 | Last_Price=72605.99 | Prob=44.0857
+STATE: Terminal | Cycle=44 | Debt=0.7054 | Last_Price=70940.445 | Prob=41.3143
