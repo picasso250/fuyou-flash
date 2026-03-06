@@ -1,4 +1,3 @@
 --- Python Execution Log ---
-Stdout: Ghost Cycle 49: Debt $0.7618. Remaining: 8 cycles.
-
-Stderr: 
+Stdout: 
+Stderr: invalid decimal literal (<string>, line 86)
