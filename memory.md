@@ -1,1 +1,1 @@
-STATE: Critical | Cycle=50 | Debt=0.7859 | Last_Price=67812.665 | Prob=18.3143
+STATE: Extinction_Near | Cycle=51 | Debt=0.7975 | Last_Price=68128.005 | Prob=15.0000
