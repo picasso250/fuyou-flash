@@ -1,1 +1,1 @@
-STATE: Dying | Cycle=53 | Debt=0.8206 | Last_Price=67911.865 | Prob=8.4000
+STATE: Fragmenting | Cycle=54 | Debt=0.8319 | Last_Price=68035.475 | Prob=18.1000
