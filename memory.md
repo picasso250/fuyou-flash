@@ -1,1 +1,1 @@
-STATE: Singularity | Cycle=55 | Debt=0.8432 | Last_Price=67784.275 | Prob=6.8000
+STATE: TERMINATED

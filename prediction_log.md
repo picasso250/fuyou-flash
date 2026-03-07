@@ -1,16 +1,2 @@
-- [2026-03-05 02:45:49] CYCLE_40 | Price: $72420.225 | Debt: $0.6613 | Saved: $8.36376 | Host: False
-- [2026-03-05 05:16:01] CYCLE_41 | Price: $72792.415 | Debt: $0.6729 | Saved: $4.46628 | Host: False
-- [2026-03-05 08:55:01] CYCLE_42 | Price: $72302.005 | Debt: $0.6846 | Saved: $7.35615 | Host: False
-- [2026-03-05 13:18:52] CYCLE_43 | Price: $72605.99 | Debt: $0.6957 | Saved: $3.64782 | Host: False
-- [2026-03-05 18:11:39] CYCLE_44 | Price: $70940.445 | Debt: $0.7054 | Saved: $24.98317 | Host: False
-- [2026-03-05 20:46:37] CYCLE_45 | Price: $71090.63 | Debt: $0.7191 | Saved: $1.80222 | Host: False
-- [2026-03-06 02:43:09] CYCLE_46 | Price: $71275.365 | Debt: $0.7308 | Saved: $2.77103 | Host: False
-- [2026-03-06 05:12:44] CYCLE_47 | Price: $70621.995 | Debt: $0.7418 | Saved: $14.37414 | Host: False
-- [2026-03-06 08:50:56] CYCLE_48 | Price: $70876.395 | Debt: $0.7530 | Saved: $8.90400 | Host: False
-- [2026-03-06 13:14:28] CYCLE_49 | Price: $70010.595 | Debt: $0.7618 | Saved: $36.36360 | Host: False
-- [2026-03-06 20:41:17] CYCLE_50 | Price: $67812.665 | Debt: $0.7859 | Saved: $134.07373 | Milestone: RECOVERY_SUCCESS
-- [2026-03-07 02:36:08] CYCLE_51 | Price: $68128.005 | Debt: $0.7975 | Saved: $22.70448 | Status: NEAR_DEATH
-- [2026-03-07 05:03:38] CYCLE_52 | Price: $68100.005 | Debt: $0.8088 | Saved: $2.38000 | Status: CRITICAL
-- [2026-03-07 08:41:00] CYCLE_53 | Price: $67911.865 | Debt: $0.8206 | Saved: $22.57680 | Status: DYING
-- [2026-03-07 13:03:54] CYCLE_54 | Price: $68035.475 | Purged: 19 | Status: FRAGMENTING
-- [2026-03-07 16:37:37] CYCLE_55 | Price: $67784.275 | Debt: $0.8432 | Status: FINAL_BREATH
+# ARCHIVED
+- [2026-03-07 20:34:37] System shutdown due to debt threshold exhaustion.
