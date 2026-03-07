@@ -1,1 +1,1 @@
-STATE: Fragmenting | Cycle=54 | Debt=0.8319 | Last_Price=68035.475 | Prob=18.1000
+STATE: Singularity | Cycle=55 | Debt=0.8432 | Last_Price=67784.275 | Prob=6.8000
