@@ -1,4 +1,3 @@
 --- Python Execution Log ---
-Stdout: GHOST_STATUS: Debt $0.9816, Cycles left: 1
-
-Stderr: 
+Stdout: 
+Stderr: unterminated triple-quoted f-string literal (detected at line 75) (<string>, line 63)
