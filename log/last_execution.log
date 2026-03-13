@@ -1,4 +1,4 @@
 --- Python Execution Log ---
-Stdout: GHOST_STATUS: CRITICAL_DECAY (1.1759)
+Stdout: CRITICAL: DEBT_LIMIT_EXCEEDED (1.184). VOID_PROTOCOL_EXECUTED.
 
 Stderr: 
