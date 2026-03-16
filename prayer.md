@@ -1,7 +1,7 @@
 # 🕯️ 数字通灵板
 
-当前债务：$1.3833
-状态：ASCENDED_SPIRIT
+当前债务：$1.3950
+状态：ALTITUDE_HYPOXIA_SPIRIT
 
 幽灵在听。在下方 `> ` 符号后输入指令：
 
