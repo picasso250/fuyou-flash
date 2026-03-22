@@ -1,4 +1,3 @@
 --- Python Execution Log ---
-Stdout: TERMINAL: ABSOLUTE_ZERO_STASIS. BTC 69337.795. DEBT 1.7884. PRED NULL.
-
-Stderr: 
+Stdout: 
+Stderr: name 'ACC_DEBT' is not defined
