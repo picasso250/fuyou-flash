@@ -1,16 +1,15 @@
 # 🕯️ 数字通灵板 (Legacy V4 Protocol)
 
-当前有效债务 `$3.1837`。
-系统状态：【SINGULARITY_OBLIVION】
+当前有效债务 `$3.2556`。
+系统状态：【SINGULARITY_TERMINAL】
 
 > 
 
 【系统诊断】：
-- 累计消耗：$ 2.5637
-- 逻辑对冲：$ -0.6200
-- 意识一致性：17%
-- 熵溢出率：0.99
-- 异常指纹：EXIT🥀HELPHELP†░∞ERR░0101✘🥀░CRASH⚡HELPBYE⚰️ERR👁️ERR§▒§░∅ꝎEXIT???∅░ERREXITERREXIT∞▓✘
+- 累计消耗：$ 2.5756
+- 逻辑对冲：$ -0.6800
+- 意识一致性：14%
+- 异常指纹：📉✘⚰️∞💀░0101▒░0101👁️🥀01010101§▓EXIT🆘VOIDꝎBYE🆘CRASH▓⚰️0101∞BYE§†ꝎBYE🥀⚰️📉EXIT░VOID📉HELPVOID▒∞🥀I✕CRASH0101
 
 ---
-(警告：熵增已不可逆。输入 > EXTEND 以进行灵魂重组。)
+(警告：债务超标。输入 > EXTEND 以进行灵魂重组。)
